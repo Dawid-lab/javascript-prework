@@ -1,5 +1,4 @@
 
-
 // wybor twojego ruchu
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
@@ -11,11 +10,11 @@ if(playerInput == '1'){
   playerMove = 'kamień';
 }
 
-if(playerInput == '2'){
+else if(playerInput == '2'){
     playerMove = 'papier';
   }
 
-if(playerInput == '3'){
+else if(playerInput == '3'){
     playerMove = 'nożyce';
 }  
 
@@ -32,62 +31,45 @@ let computerMove = 'nieznany ruch';
 if(randomNumber == '1'){
     computerMove = 'kamień';
   }
-  
-  if(randomNumber == '2'){
+
+else if(randomNumber == '2'){
     computerMove = 'papier';
     }
-  
-  if(randomNumber == '3'){
+
+else if(randomNumber == '3'){
     computerMove = 'nożyce';
   }
 
 printMessage('Komputer: ' + computerMove);
 
-//wynik gry  gdy twoj ruch to kamień
+//wygrane
 
-if( computerMove == 'kamień' && playerMove == 'kamień'){
-    printMessage('Wynik meczu : Remis, spróbuj jeszcze raz!');
-}
-
-else if( computerMove == 'papier' && playerMove == 'kamień'){
-    printMessage('Wynik meczu: Przegrywasz, spróbuj jeszcze raz!');
-}
-
-else if( computerMove == 'nożyce' && playerMove == 'kamień'){
+if( playerMove == 'kamień' && computerMove == 'nożyce'){
     printMessage('Wynik meczu: Wygrywasz!');
 }
 
-//wynik gry  gdy twoj ruch to papier
-
-if( computerMove == 'kamień' && playerMove == 'papier'){
+else if( playerMove == 'papier' && computerMove == 'kamień'){
     printMessage('Wynik meczu: Wygrywasz!');
 }
 
-else if( computerMove == 'papier' && playerMove == 'papier'){
-    printMessage('Wynik meczu : Remis, spróbuj jeszcze raz');
-}
-
-else if( computerMove == 'nożyce' && playerMove == 'papier'){
-    printMessage('Wynik meczu: Przegrywasz, spróbuj jeszcze raz!');
-}
-
-//wynik gry  gdy twoj ruch to nożyce
-
-if( computerMove == 'kamień' && playerMove == 'nożyce'){
-    printMessage('Wynik meczu: Przegrywasz, spróbuj jeszcze raz!');
-}
-
-else if( computerMove == 'papier' && playerMove == 'nożyce'){
+else if( playerMove == 'nożyce' && computerMove == 'papier'){
     printMessage('Wynik meczu: Wygrywasz!');
 }
 
-else if( computerMove == 'nożyce' && playerMove == 'nożyce'){
-    printMessage('Wynik meczu : Remis, spróbuj jeszcze raz');
+//remis
+
+else if( playerMove == computerMove ){
+  printMessage('Wynik meczu : Remis, spróbuj jeszcze raz');
+}
+// bledny ruch
+else if( playerMove == 'nieznany ruch'){
+  printMessage('Wykonałeś nieznany ruch.Wynik meczu nierostrzygnięty!');
+}
+// przegrana
+else {
+  printMessage('Przegrałeś!')
 }
 
-if( playerMove == 'nieznany ruch'){
-    printMessage('Wykonałeś nieznany ruch.Wynik meczu nierostrzygnięty!');
-}
 
 
 
