@@ -70,6 +70,14 @@ else {
   printMessage('Przegrałeś!')
 }
 
+function buttonClicked(){
+  printMessage('Guzik został kliknięty');
+}
+
+let testButton = document.getElementById('test-button');
+
+testButton.addEventListener('click', buttonClicked);
+
 
 
 

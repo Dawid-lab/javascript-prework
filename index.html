@@ -6,14 +6,41 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="container">
-		1
-		<img src="images/1kamien.jpg" alt="kamień" width="150" height="150">
-		2
-		<img src="images/2papier.jpg" alt="papier" width="150" height="150">
-		3
-		<img src="images/3nozyce.jpg" alt="nożyce" width="150" height="150">
-		<div id="buttons"></div>
+	<div class="container">		
+		<h2>Kamień, papier, nożyce</h2>
+		<div class="row">
+			<div>
+				<p>1: kamień</p>
+				<img src="images/1kamien.jpg" alt="kamień" width="100" height="100">
+			</div>
+			<div>
+				<p>2: papier</p>
+				<img src="images/2papier.jpg" alt="papier" width="100" height="100">
+			</div>
+			<div>
+				<p>3: nożyce</p>
+				<img src="images/3nozyce.jpg" alt="nożyce" width="100" height="100">
+			</div>
+		</div>
+
+			
+
+		</div>
+			<h4>Zasady</h4>
+			<p>Gra składa się z kolejnych tur. W każdej turze ty i komputer równocześnie, na umówiony sygnał, szybko wystawiacie przed siebie dłoń, pokazując symbol kamienia papieru lub nożyc. Gracz, który pokazał silniejszy symbol wygrywa. </p>
+			<p>Oto hierarchia symboli:</p>
+			<ul>
+				<li>nożyce są silniejsze od papieru, ponieważ go tną,</li>
+				<li>kamień jest silniejszy od nożyc, ponieważ je tępi,</li>
+				<li>papier jest silniejszy od kamienia, ponieważ go owija.</li>
+			</ul>
+			<img src="images/ty.jpg" alt="ty" width="150" height="150">
+			<img src="images/komputer.jpg" alt="nożyce" width="150" height="150">
+		</div>
+
+		<div id="buttons">
+			<button id="test-button">Guzik testowy</button>
+		</div>
 		<div id="messages"></div>
 	</div>
 	<script src="js/functions.js"></script>
