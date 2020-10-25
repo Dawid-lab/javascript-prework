@@ -32,13 +32,10 @@ if( playerMove == 'kamień' && computerMove == 'nożyce'){
     printMessage('Wynik meczu: Wygrywasz!');
 } else if( playerMove == 'papier' && computerMove == 'kamień'){
     printMessage('Wynik meczu: Wygrywasz!');
-}
-
-else if( playerMove == 'nożyce' && computerMove == 'papier'){
+} else if( playerMove == 'nożyce' && computerMove == 'papier'){
   printMessage('Wynik meczu: Wygrywasz!');
 }
 //remis
-
 else if( playerMove == computerMove ){
   printMessage('Wynik meczu : Remis, spróbuj jeszcze raz');
 }
