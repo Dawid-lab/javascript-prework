@@ -41,22 +41,13 @@ if( playerMove == 'kamień' && computerMove == 'nożyce'){
   printMessage('Przegrałeś!')                                           // przegrana
 }
 
-
-
-
-
-
-
 */
 
-//wybor gracza
+//wybor gracza 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 console.log('Gracz wpisał: ' + playerInput);
-
-
-let playerMove = getMoveName(playerInput);
-
-//losowosc komputera
+let argPlayerMove = getMoveName(playerInput);
+// wybor komputera
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('Wylosowana liczba to: ' + randomNumber);
 let computerMove = getMoveName(randomNumber);
@@ -69,26 +60,27 @@ function getMoveName(argMoveId) {
   } else if (argMoveId == 3) {
   return 'nożyce';
   }
-                                     printMessage('Nie znam ruchu o id ' + argMoveId + '.');
-                                     return 'nieznany ruch';
+}
+//Rezultat wyboru gracza i komputera
 function displayResult(argComputerMove, argPlayerMove) {
-  console.log('moves:', argComputerMove, argPlayerMove);
+console.log('moves:', argComputerMove, argPlayerMove);
                                                                            //wygrane
-if( playerMove == 'kamień' && computerMove == 'nożyce'){
+if( argPlayerMove == 'kamień' && argComputerMove == 'nożyce'){
 printMessage('Wynik meczu: Wygrywasz!');
-} else if( playerMove == 'papier' && computerMove == 'kamień'){
+} else if( argPlayerMove == 'papier' && argComputerMove == 'kamień'){
 printMessage('Wynik meczu: Wygrywasz!');
-} else if( playerMove == 'nożyce' && computerMove == 'papier'){
+} else if( argPlayerMove == 'nożyce' && argComputerMove == 'papier'){
 printMessage('Wynik meczu: Wygrywasz!');
-} else if( playerMove == computerMove ){                                 //remis
+} else if( argPlayerMove == argComputerMove ){                              //remis
 printMessage('Wynik meczu : Remis, spróbuj jeszcze raz');
-} else if( playerMove == 'nieznany ruch'){                              // bledny ruch
+} else if( argPlayerMove == 'nieznany ruch'){                              // bledny ruch
 printMessage('Wykonałeś nieznany ruch.Wynik meczu nierostrzygnięty!');
 } else {
-printMessage('Przegrałeś!');                                           // przegrana
+printMessage('Przegrałeś!');                                                // przegrana
+}
 }
 
-}
+
 
 
 
