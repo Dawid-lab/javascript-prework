@@ -1,5 +1,5 @@
 
-/*                                            // wybor twojego ruchu
+ /*                                         // wybor twojego ruchu
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 console.log('Gracz wpisał: ' + playerInput);
 
@@ -42,6 +42,8 @@ printMessage('Przegrałeś!')                                           // przeg
 }
 
 */
+
+
 //wynik wyboru gracza i komputera
 function getMoveName(argMoveId) {
   if (argMoveId == 1) {
@@ -55,12 +57,11 @@ function getMoveName(argMoveId) {
 //wybor gracza 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 console.log('Gracz wpisał: ' + playerInput);
-let argPlayerMove = getMoveName(playerInput);
+let playerMove = getMoveName(playerInput);
 // wybor komputera
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('Wylosowana liczba to: ' + randomNumber);
 let computerMove = getMoveName(randomNumber);
-
 //Rezultat wyboru gracza i komputera
 function displayResult(argComputerMove, argPlayerMove) {
   console.log('moves:', argComputerMove, argPlayerMove);
@@ -71,17 +72,16 @@ function displayResult(argComputerMove, argPlayerMove) {
     printMessage('Wynik meczu: Wygrywasz!');
   } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
     printMessage('Wynik meczu: Wygrywasz!');
-  } else if (argPlayerMove == argComputerMove) {                              //remis
+  } else if (argPlayerMove == argComputerMove) {                                 //remis
     printMessage('Wynik meczu : Remis, spróbuj jeszcze raz');
-  } else if (argPlayerMove == 'nieznany ruch') {                              // bledny ruch
+  } else if (argPlayerMove == 'nieznany ruch') {                                  // bledny ruch
     printMessage('Wykonałeś nieznany ruch.Wynik meczu nierostrzygnięty!');
-  } else {
-    printMessage('Przegrałeś!');                                                // przegrana
+  } else {  
+    printMessage('Przegrałeś!');                                                  // przegrana
   }
 }
 
-
-displayResult(argComputerMove, argPlayerMove)
+displayResult(computerMove, playerMove)
 
 
 
