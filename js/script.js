@@ -91,7 +91,7 @@ function displayResult(argComputerMove, argPlayerMove) {
   });
 
 }
-
+displayResult(computerMove, playerMove)
 }
 
 
