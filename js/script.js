@@ -43,8 +43,9 @@ printMessage('Przegrałeś!')                                           // przeg
 
 */
 
-
-//wynik wyboru gracza i komputera
+function playGame(playerInput){
+  function  clearMessages(){}  
+  //wynik wyboru gracza i komputera
 function getMoveName(argMoveId) {
   if (argMoveId == 1) {
     return 'kamień';
@@ -55,7 +56,7 @@ function getMoveName(argMoveId) {
   }
 }
 //wybor gracza 
-let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+
 console.log('Gracz wpisał: ' + playerInput);
 let playerMove = getMoveName(playerInput);
 // wybor komputera
@@ -67,21 +68,41 @@ function displayResult(argComputerMove, argPlayerMove) {
   console.log('moves:', argComputerMove, argPlayerMove);
   //wygrane
   if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
-    printMessage('Wynik meczu: Wygrywasz!');
+    printMessage('Wynik meczu: Wygrałeś!');
   } else if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
-    printMessage('Wynik meczu: Wygrywasz!');
+    printMessage('Wynik meczu: Wygrałeś!');
   } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
-    printMessage('Wynik meczu: Wygrywasz!');
+    printMessage('Wynik meczu: Wygrałeś!');
   } else if (argPlayerMove == argComputerMove) {                                 //remis
     printMessage('Wynik meczu : Remis, spróbuj jeszcze raz');
   } else if (argPlayerMove == 'nieznany ruch') {                                  // bledny ruch
     printMessage('Wykonałeś nieznany ruch.Wynik meczu nierostrzygnięty!');
   } else {  
-    printMessage('Przegrałeś!');                                                  // przegrana
+    printMessage('Wynik meczu: Przegrałeś!');                                                  // przegrana
   }
-}
+  document.getElementById('play-rock').addEventListener('click', function(){
+    printMessage('Guzik rock został kliknięty');
+  });
+  document.getElementById('play-paper').addEventListener('click', function(){
+    printMessage('Guzik paper został kliknięty');
+  });
+  document.getElementById('play-scissors').addEventListener('click', function(){
+    printMessage('Guzik scissors został kliknięty');
+  });
 
+
+
+
+
+
+
+/*
+printMessage('Twój ruch to: ' + playerMove);
+printMessage('Komputera ruch to: ' + computerMove);
 displayResult(computerMove, playerMove)
+*/
+
+ }
 
 
 
