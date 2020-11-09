@@ -44,7 +44,7 @@ printMessage('Przegrałeś!')                                           // przeg
 */
 
 function playGame(playerInput){
-clearMessages(){}
+clearMessages();
   //wynik wyboru gracza i komputera
 function getMoveName(argMoveId) {
   if (argMoveId == 1) {
@@ -90,8 +90,9 @@ function displayResult(argComputerMove, argPlayerMove) {
     printMessage('Guzik scissors został kliknięty');
   });
 
+}
 
-
+}
 
 
 
@@ -102,7 +103,7 @@ printMessage('Komputera ruch to: ' + computerMove);
 displayResult(computerMove, playerMove)
 */
 
- }
+
 
 
 
