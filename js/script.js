@@ -44,7 +44,7 @@ printMessage('Przegrałeś!')                                           // przeg
 */
 
 function playGame(playerInput){
-  function  clearMessages(){}  
+clearMessages(){}
   //wynik wyboru gracza i komputera
 function getMoveName(argMoveId) {
   if (argMoveId == 1) {
