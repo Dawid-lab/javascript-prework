@@ -80,6 +80,7 @@ function displayResult(argComputerMove, argPlayerMove) {
   } else {  
     printMessage('Wynik meczu: Przegrałeś!');                                                  // przegrana
   }
+
   document.getElementById('play-rock').addEventListener('click', function(){
     printMessage('Guzik rock został kliknięty');
   });
