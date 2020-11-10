@@ -80,20 +80,24 @@ function displayResult(argComputerMove, argPlayerMove) {
   } else {  
     printMessage('Wynik meczu: Przegrałeś!');                                                  // przegrana
   }
+}
+}
 
   document.getElementById('play-rock').addEventListener('click', function(){
-    printMessage('Guzik rock został kliknięty');
+    playGame(1);
   });
   document.getElementById('play-paper').addEventListener('click', function(){
-    printMessage('Guzik paper został kliknięty');
+    playGame(2);
   });
   document.getElementById('play-scissors').addEventListener('click', function(){
-    printMessage('Guzik scissors został kliknięty');
+    playGame(3);
   });
 
-}
-displayResult(computerMove, playerMove)
-}
+  
+
+
+
+
 
 
 
