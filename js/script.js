@@ -81,6 +81,9 @@ function displayResult(argComputerMove, argPlayerMove) {
     printMessage('Wynik meczu: Przegrałeś!');                                                  // przegrana
   }
 }
+printMessage('Twój ruch to: ' + playerMove);
+printMessage('Komputera ruch to: ' + computerMove);
+displayResult(computerMove, playerMove)
 }
 
   document.getElementById('play-rock').addEventListener('click', function(){
@@ -93,7 +96,6 @@ function displayResult(argComputerMove, argPlayerMove) {
     playGame(3);
   });
 
-  
 
 
 
@@ -102,11 +104,7 @@ function displayResult(argComputerMove, argPlayerMove) {
 
 
 
-/*
-printMessage('Twój ruch to: ' + playerMove);
-printMessage('Komputera ruch to: ' + computerMove);
-displayResult(computerMove, playerMove)
-*/
+
 
 
 
