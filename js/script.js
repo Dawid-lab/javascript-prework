@@ -42,7 +42,7 @@ printMessage('Przegrałeś!')                                           // przeg
 }
 
 */
-
+{
 function playGame(playerInput){
 clearMessages();
   //wynik wyboru gracza i komputera
@@ -56,13 +56,12 @@ function getMoveName(argMoveId) {
   }
 }
 //wybor gracza 
-
 console.log('Gracz wpisał: ' + playerInput);
-let playerMove = getMoveName(playerInput);
+const playerMove = getMoveName(playerInput);
 // wybor komputera
-let randomNumber = Math.floor(Math.random() * 3 + 1);
+const randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('Wylosowana liczba to: ' + randomNumber);
-let computerMove = getMoveName(randomNumber);
+const computerMove = getMoveName(randomNumber);
 //Rezultat wyboru gracza i komputera
 function displayResult(argComputerMove, argPlayerMove) {
   console.log('moves:', argComputerMove, argPlayerMove);
@@ -96,7 +95,7 @@ displayResult(computerMove, playerMove)
     playGame(3);
   });
 
-
+}
 
 
 
