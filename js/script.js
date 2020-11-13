@@ -43,7 +43,7 @@ printMessage('Przegrałeś!')                                           // przeg
 
 */
 {
-function playGame(playerInput){
+const playGame = function(playerInput) {
 clearMessages();
   //wynik wyboru gracza i komputera
 function getMoveName(argMoveId) {
@@ -63,7 +63,7 @@ const randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('Wylosowana liczba to: ' + randomNumber);
 const computerMove = getMoveName(randomNumber);
 //Rezultat wyboru gracza i komputera
-function displayResult(argComputerMove, argPlayerMove) {
+const displayResult = function(argComputerMove, argPlayerMove) {
   console.log('moves:', argComputerMove, argPlayerMove);
   //wygrane
   if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
